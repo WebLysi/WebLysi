@@ -638,3 +638,16 @@ window.addEventListener('DOMContentLoaded', () => {
 // --------------------------------------------- //
 // Color Switch End
 // --------------------------------------------- //
+
+// --------------------------------------------- //
+// nav icon js
+// --------------------------------------------- //
+
+document.getElementById('color-switcher').addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+});
+
+// --------------------------------------------- //
+// nav icon js end
+// --------------------------------------------- //
+
