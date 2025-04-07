@@ -4708,7 +4708,7 @@ form textarea:required:valid {
 
 @media only screen and (min-width: 768px) {
     .color {
-        top: 3rem;
+        top: 4rem;
         right: 5rem;
     }
 }
@@ -4722,26 +4722,38 @@ form textarea:required:valid {
 
 .color-switcher {
     position: relative;
-    display: -webkit-inline-box;
-    display: -moz-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
     border: none;
-    outline: 0;
-    padding: 0;
-    font: inherit;
-    background-color: var(--neutral-bright);
     cursor: pointer;
-    text-decoration: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 1.8rem;
-    height: 1.8rem;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+    width: auto;
+    height: auto;
+    padding: 0;
 }
+
+.color-switcher .icon {
+    position: absolute;
+    font-size: 2.5rem;
+    color: black;
+    opacity: 0;
+    transform: scale(0.5) rotate(-90deg);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.color-switcher.light .icon--sun {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    color: black;
+}
+
+.color-switcher.dark .icon--moon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    color: white;
+}
+
 
 @media only screen and (min-width: 768px) {
     .color-switcher {
@@ -4756,6 +4768,7 @@ form textarea:required:valid {
         height: 2.6rem;
     }
 }
+
 
 .header-offset {
     display: -webkit-box;

@@ -609,45 +609,50 @@ $(function () {
 // Color Switch Start
 // --------------------------------------------- //
 const themeBtn = document.querySelector('.color-switcher');
+const darkLogo = document.querySelector('.dark-logo');
+const lightLogo = document.querySelector('.light-logo');
 
 function getCurrentTheme() {
     let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    localStorage.getItem('template.theme') ? theme = localStorage.getItem('template.theme') : null;
+    if (localStorage.getItem('template.theme')) {
+        theme = localStorage.getItem('template.theme');
+    }
     return theme;
+}
+
+function switchNavLogo(theme) {
+    if (theme === 'dark') {
+        darkLogo.style.display = 'inline';
+        lightLogo.style.display = 'none';
+    } else {
+        darkLogo.style.display = 'none';
+        lightLogo.style.display = 'inline';
+    }
 }
 
 function loadTheme(theme) {
     const root = document.querySelector(':root');
-    root.setAttribute('color-scheme', `${theme}`);
-};
+    root.setAttribute('color-scheme', theme);
+    themeBtn.classList.remove('light', 'dark');
+    themeBtn.classList.add(theme);
+    switchNavLogo(theme);
+}
 
 themeBtn.addEventListener('click', () => {
     let theme = getCurrentTheme();
-    if (theme === 'dark') {
-        theme = 'light';
-    } else {
-        theme = 'dark';
-    }
-    localStorage.setItem('template.theme', `${theme}`);
+    theme = theme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('template.theme', theme);
     loadTheme(theme);
 });
 
 window.addEventListener('DOMContentLoaded', () => {
     loadTheme(getCurrentTheme());
 });
-// --------------------------------------------- //
-// Color Switch End
-// --------------------------------------------- //
 
-// --------------------------------------------- //
-// nav icon js
-// --------------------------------------------- //
-
+// Optional: Toggle HTML class if needed elsewhere
 document.getElementById('color-switcher').addEventListener('click', () => {
     document.documentElement.classList.toggle('dark');
 });
-
 // --------------------------------------------- //
-// nav icon js end
+// Color Switch End
 // --------------------------------------------- //
-
