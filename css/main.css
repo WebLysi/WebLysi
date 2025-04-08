@@ -4708,7 +4708,7 @@ form textarea:required:valid {
 
 @media only screen and (min-width: 768px) {
     .color {
-        top: 4rem;
+        top: 3rem;
         right: 5rem;
     }
 }
@@ -4735,7 +4735,7 @@ form textarea:required:valid {
 
 .color-switcher .icon {
     position: absolute;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: black;
     opacity: 0;
     transform: scale(0.5) rotate(-90deg);
@@ -7874,6 +7874,13 @@ form textarea:required:valid {
     height: 50px;
     border-radius: 25%;
     margin-right: 8px;
+}
+
+@media only screen and (max-width:768px) {
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .dark-logo {
