@@ -106,6 +106,28 @@
     --neutral-gray-dark: #404040;
 }
 
+
+
+
+/* bg img */
+.dark-bg {
+    display: none;
+}
+
+.light-bg {
+    display: block;
+}
+
+.dark .dark-bg {
+    display: block;
+}
+
+.dark .light-bg {
+    display: none;
+}
+
+
+
 /* defaults */
 @media (prefers-color-scheme: light) {
     :root {
@@ -2833,7 +2855,7 @@ form textarea:required:valid {
 
 .intro__background.intro-bg-01 img,
 .intro__background.intro-bg-02 img {
-    display: block;
+    /* display: block; */
     width: 100%;
     height: auto;
 }
@@ -3017,7 +3039,7 @@ form textarea:required:valid {
 .intro-bg-02__02 {
     bottom: -160px;
     top: auto;
-    left: -30px;
+    left: 0px;
     width: 100px;
     height: auto;
 }
@@ -3026,7 +3048,7 @@ form textarea:required:valid {
     .intro-bg-02__02 {
         bottom: -200px;
         top: auto;
-        left: -42px;
+        left: 0px;
         width: 140px;
         height: auto;
     }
@@ -3036,7 +3058,7 @@ form textarea:required:valid {
     .intro-bg-02__02 {
         bottom: -200px;
         top: auto;
-        left: -30px;
+        left: 0px;
         width: 140px;
         height: auto;
     }
@@ -3046,7 +3068,7 @@ form textarea:required:valid {
     .intro-bg-02__02 {
         bottom: auto;
         top: 150px;
-        left: -68px;
+        left: 0px;
         width: 200px;
         height: auto;
     }
@@ -3056,7 +3078,7 @@ form textarea:required:valid {
     .intro-bg-02__02 {
         bottom: auto;
         top: 210px;
-        left: -82px;
+        left: 0px;
         width: 240px;
         height: auto;
     }
@@ -3066,7 +3088,7 @@ form textarea:required:valid {
     .intro-bg-02__02 {
         top: 150px;
         bottom: auto;
-        left: -120px;
+        left: 00px;
         width: 350px;
         height: auto;
     }
@@ -3664,7 +3686,6 @@ form textarea:required:valid {
 .bottom__background.bottom-bg-01 img,
 .bottom__background.bottom-bg-02 img,
 .bottom__background.bottom-bg-03 img {
-    display: block;
     width: 100%;
     height: auto;
 }
@@ -3839,13 +3860,9 @@ form textarea:required:valid {
     }
 }
 
-.bottom-bg-02__02 {
-    display: none;
-}
-
 @media only screen and (min-width: 768px) {
     .bottom-bg-02__02 {
-        display: block;
+        /* display: block; */
         top: 50px;
         left: -35px;
         width: 140px;
@@ -3932,13 +3949,9 @@ form textarea:required:valid {
     }
 }
 
-.bottom-bg-03__02 {
-    display: none;
-}
-
 @media only screen and (min-width: 768px) {
     .bottom-bg-03__02 {
-        display: block;
+        /* display: block; */
         top: auto;
         bottom: -30px;
         left: -100px;
@@ -7947,9 +7960,4 @@ form textarea:required:valid {
 .dark .light-logo {
     display: none;
 }
-
-
-
-
-
 

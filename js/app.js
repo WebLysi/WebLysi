@@ -573,6 +573,9 @@ $(function () {
 const themeBtn = document.querySelector('.color-switcher');
 const darkLogo = document.querySelector('.dark-logo');
 const lightLogo = document.querySelector('.light-logo');
+const darkBgs = document.querySelectorAll('.dark-bg');
+const lightBgs = document.querySelectorAll('.light-bg');
+
 
 function getCurrentTheme() {
     let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -583,14 +586,13 @@ function getCurrentTheme() {
 }
 
 function switchNavLogo(theme) {
-    if (theme === 'dark') {
-        darkLogo.style.display = 'inline';
-        lightLogo.style.display = 'none';
-    } else {
-        darkLogo.style.display = 'none';
-        lightLogo.style.display = 'inline';
-    }
+    darkLogo.style.display = theme === 'dark' ? 'inline' : 'none';
+    lightLogo.style.display = theme === 'light' ? 'inline' : 'none';
+
+    darkBgs.forEach(el => el.style.display = theme === 'dark' ? 'none' : 'block');
+    lightBgs.forEach(el => el.style.display = theme === 'light' ? 'none' : 'block');
 }
+
 
 function loadTheme(theme) {
     const root = document.querySelector(':root');
