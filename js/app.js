@@ -578,7 +578,7 @@ const lightBgs = document.querySelectorAll('.light-bg');
 
 
 function getCurrentTheme() {
-    let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    let theme = 'dark'; 
     if (localStorage.getItem('template.theme')) {
         theme = localStorage.getItem('template.theme');
     }
