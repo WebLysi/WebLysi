@@ -6884,7 +6884,7 @@ form textarea:required:valid {
 }
 
 .portfolio-stack__descr {
-    display: none;
+    /* display: none; */
     position: absolute;
     bottom: 0;
     left: 0;
