@@ -6884,12 +6884,21 @@ form textarea:required:valid {
 }
 
 .portfolio-stack__descr {
-    /* display: none; */
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 2.4rem 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .portfolio-stack__title, .portfolio-stack__text {
+        color: #ffffff!important;
+    }
+    .portfolio-stack__descr {
+        background-color: #00000085;
+    }
+    
 }
 
 @media only screen and (min-width: 768px) {
