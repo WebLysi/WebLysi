@@ -49,7 +49,7 @@ function renderTestimonials() {
         .map((t) => {
             return `
         <div class="swiper-slide">
-            <div class="testimonials-card animate-in-up">
+            <div class="testimonials-card animate-in-up mx-1">
                 <div class="container-fluid p-0 fullheight-l">
                     <div class="row g-0 d-flex align-items-stretch fullheight-l">
                         <div class="col-12 col-lg-6 testimonials-card__tdata">
