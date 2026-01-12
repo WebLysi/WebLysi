@@ -22,16 +22,71 @@ const testimonials = [
         image: "img/testimonials/TaliparambaSreeBhagavathiTemple_1400x1786.webp"
     },
     {
-        name: "Shamsudheen Moosa K",
+        name: "Vismaya Jayaraj",
+        position: "Founder Of",
+        company: "GiSPACE Clothing Brand",
+        companyLink: "",
+        rating: 4,
+        avatar: "img/avatars/person.webp",
+        text: "Weblysi created an amazing website for our clothing brand! The design is sleek and user-friendly, making it easy for our customers to browse and shop. The team was attentive to our needs and delivered a fantastic final product.",
+        projectLink: "",
+        image: "img/testimonials/gispace.webp"
+    },
+    {
+        name: "Sameer K",
         position: "Founder Of",
         company: "Tutolia Learning Platform",
-        companyLink: "https://tutolia.weblysi.in/",
-        rating: 5,
+        companyLink: "",
+        rating: 4,
         avatar: "img/avatars/person.webp",
         text: "The team weblysi did an outstanding job on our website!. It's elegant, easy to use, and perfectly captures the essence of our brand",
-        projectLink: "https://tutolia.weblysi.in/",
+        projectLink: "",
         image: "img/testimonials/tutolia_1400x1665.webp"
-    }
+    },
+    {
+        name: "Sinan T",
+        position: "Euntrepreneur &",
+        company: "Real Estate",
+        companyLink: "",
+        rating: 5,
+        avatar: "img/avatars/person.webp",
+        text: "Our Integrated Property Management Systems is now live and we are extremely happy with the end result. The team at Weblysi were professional, efficient and a pleasure to work with throughout the entire process.",
+        projectLink: "",
+        image: "img/testimonials/ipms_1545x1900.webp"
+    },
+    {
+        name: "Althaf PV",
+        position: "Owner Of",
+        company: "Cargo Automotives",
+        companyLink: "",
+        rating: 4,
+        avatar: "img/avatars/person.webp",
+        text: "We are extremely satisfied with the website Weblysi developed for our automotive business. The design is sleek and user-friendly, making it easy for our customers to navigate and find the information they need.",
+        projectLink: "",
+        image: "img/testimonials/cargo_1550x1900.webp"
+    },
+    {
+        name: "Isam Abdullah",
+        position: "Owner Of",
+        company: "Kenze Restaurant",
+        companyLink: "",
+        rating: 5,
+        avatar: "img/avatars/person.webp",
+        text: "Being a restaurant owner, having an appealing and functional website is crucial for attracting customers. Weblysi did an exceptional job in creating a website that not only looks great but also provides a seamless user experience.",
+        projectLink: "",
+        image: "img/testimonials/qrfood_1560x1900.webp"
+    },
+    // {
+    //     name: "",
+    //     position: "Manager Of",
+    //     company: "",
+    //     companyLink: "",
+    //     rating: 5,
+    //     avatar: "img/avatars/person.webp",
+    //     text: "",
+    //     projectLink: "",
+    //     image: "img/testimonials/"
+    // },
 ];
 
 
@@ -61,9 +116,9 @@ function renderTestimonials() {
                                     <h4 class="tauthor__name animate-in-up">${t.name}</h4>
                                     <p class="tauthor__position small animate-in-up">
                                         ${t.position}
-                                        ${t.company
-                                            ? `<a class="link-small-underline" href="${t.companyLink}">${t.company}</a>`
-                                            : ""
+                                        ${t.companyLink ?
+                                            `<a class="link-small-underline" href="${t.companyLink}">${t.company}</a>`
+                                            : `${t.company}`
                                         }
                                     </p>
                                     <div class="tauthor__rating d-flex animate-in-up">
@@ -75,12 +130,14 @@ function renderTestimonials() {
                             <div class="testimonials-card__descr animate-in-up">
                                 <p class="type-basic-160lh">${t.text}</p>
                             </div>
+                            ${t.projectLink ? `
                             <div class="testimonials-card__btnholder animate-in-up">
                                 <a class="btn btn-line icon-right slide-right" href="${t.projectLink}">
                                 <span class="btn-caption">Project page</span>
                                 <i class="ph ph-arrow-right"></i>
                                 </a>
                             </div>
+                            ` : "" }
                         </div>  
                         <div class="col-12 col-lg-6 testimonials-card__timage fullheight-l">
                             <div class="timage__inner fullheight-l animate-in-up">
@@ -124,6 +181,9 @@ document.addEventListener("DOMContentLoaded", () => {
         pagination: {
             el: paginationEl,
             type: "fraction"
+        },
+        keyboard: {
+            enabled: true
         }
     });
 });
