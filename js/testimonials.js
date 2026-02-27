@@ -14,11 +14,11 @@ const testimonials = [
         name: "A. K. Reghunathan",
         position: "Rakshaadhikaari Of",
         company: "Taliparamba Sree Bhagavathi Temple",
-        companyLink: "https://tbt.weblysi.in/",
+        companyLink: "https://taliparambasreebhagavathitemple.in/",
         rating: 5,
         avatar: "img/clients/Reghunathan-tbt.webp",
         text: "Weblysi did an outstanding job on our website! It's modern, well-organised, and showcases our gallery beautifully. The team was professional, responsive, and made the whole process smooth and efficient.",
-        projectLink: "https://tbt.weblysi.in/",
+        projectLink: "https://taliparambasreebhagavathitemple.in/",
         image: "img/testimonials/TaliparambaSreeBhagavathiTemple_1400x1786.webp"
     },
     {
@@ -68,7 +68,7 @@ const testimonials = [
     {
         name: "Isam Abdullah",
         position: "Owner Of",
-        company: "Kenze Restaurant",
+        company: "Kanze Restaurant",
         companyLink: "",
         rating: 5,
         avatar: "img/avatars/person.webp",
